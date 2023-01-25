@@ -71,7 +71,6 @@ def print_map(map):
 
 def game_controls(input_data_store):
     input_val = get_user_input()
-    print("Got", input_val)
     if input_val == b"w":
         input_data_store.put(1)
     elif input_val == b"s":
@@ -125,8 +124,6 @@ def game_loop():
         plot_snake(map, snake)
         print_map(map)
         print("Score:", score)
-        print(snake)
-        print(direction)
         direction = process_controls(direction)
         clear_screen()
 
